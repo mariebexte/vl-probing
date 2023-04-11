@@ -1,0 +1,8 @@
+331	Man Woman
+331	Woman Man
+103	Woman Boy
+103	Boy Woman
+64	Man Girl
+64	Girl Man
+51	Girl Boy
+51	Boy Girl
