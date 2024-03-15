@@ -5,7 +5,7 @@ It provides the code to derive these benchmarks from the existing datasets they 
 
 ![Benchmark Overview](benchmark-overview.png)
 
-## Use
+## Preparation
 Before you can compile the benchmarks, the required source datasets have to be placed into the respective directories as detailed below:
 
 | subdir of ```source_datasets```       | source dataset files           | corresponding images found here (place in subdir of ```images```) |
