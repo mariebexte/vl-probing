@@ -5,6 +5,9 @@ import utils
 data_path = "../source_datasets/ARO"
 target_path = os.path.join(utils.TARGET_PATH)
 
+if not os.path.exists(target_path):
+    os.mkdir(target_path)
+
 def prepare_aro(in_path, aspect, out_path):
 
     data_dict = {}

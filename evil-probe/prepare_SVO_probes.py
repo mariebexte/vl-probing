@@ -11,12 +11,16 @@ import os
 from requests.exceptions import SSLError, ConnectionError, TooManyRedirects
 from PIL import Image
 
+
+if not os.path.exists(utils.TARGET_PATH):
+    os.mkdir(utils.TARGET_PATH)
+
 data_path = '../source_datasets/SVO-Probes/svo_probes.csv'
 target_path = os.path.join(utils.TARGET_PATH, 'SVO_probes')
 image_target_dir = '../images/SVO_Probes'
 
 if not os.path.exists(image_target_dir):
-    os.mkdir(image_target_dir)
+    os.makedirs(image_target_dir)
 
 probes = pd.read_csv(data_path)
 # print(probes.columns)

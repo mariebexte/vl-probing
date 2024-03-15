@@ -14,6 +14,9 @@ out_path = os.path.join(utils.TARGET_PATH, 'coco_random.jsonl')
 # Karpathy split
 in_file = '../source_datasets/MS_COCO/dataset_coco.json'
 
+if not os.path.exists(utils.TARGET_PATH):
+    os.mkdir(utils.TARGET_PATH)
+
 flickr_random_examples = {}
 
 test_examples = {}

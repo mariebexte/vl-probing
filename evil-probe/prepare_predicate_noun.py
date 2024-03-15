@@ -3,6 +3,10 @@ from nltk.probability import FreqDist
 import os
 import utils
 
+
+if not os.path.exists(utils.TARGET_PATH):
+    os.mkdir(utils.TARGET_PATH)
+
 file_path = "../source_datasets/Predicate-Noun/eval_set.json"
 target_path = os.path.join(utils.TARGET_PATH, 'predicate-noun')
 

@@ -6,6 +6,9 @@ import utils
 out_dir = os.path.join(utils.TARGET_PATH)
 in_file = '../source_datasets/EqBen/ann_json_finegrained_random.json'
 
+if not os.path.exists(out_dir):
+    os.mkdir(out_dir)
+
 # For each subset, build one dict with id -> dict, where dict has idx -> caption/image_path
 masterdict = {}
 

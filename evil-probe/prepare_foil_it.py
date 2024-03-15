@@ -2,6 +2,10 @@ import json
 import utils
 import os
 
+
+if not os.path.exists(utils.TARGET_PATH):
+    os.mkdir(utils.TARGET_PATH)
+
 filename_lookup_path = "../source_datasets/MS_COCO/coco_filenames.json"
 
 def get_coco_filename(coco_filenames, filename):

@@ -1,0 +1,6 @@
+nltk
+pandas
+spacy
+numpy
+Pillow
+requests

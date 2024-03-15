@@ -13,6 +13,9 @@ target_path = os.path.join(utils.TARGET_PATH)
 example_dict = {}
 dict_index = 0
 
+if not os.path.exists(target_path):
+    os.mkdir(target_path)
+
 # Read jsonl into dataframe
 with open(path, 'r') as f:
     lines = f.read().splitlines()

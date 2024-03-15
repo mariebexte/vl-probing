@@ -6,6 +6,8 @@ import os
 data_path = '../source_datasets/Compositional-Visual-Genome/ComVG.csv'
 target_path = os.path.join(utils.TARGET_PATH)
 
+if not os.path.exists(target_path):
+    os.mkdir(target_path)
 
 def get_gold_descriptions(probes):
 

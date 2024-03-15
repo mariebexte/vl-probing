@@ -4,8 +4,12 @@ import utils
 from nltk.tokenize import sent_tokenize
 import sys
 
+
 valse_path = "../source_datasets/VALSE"
 target_path = os.path.join(utils.TARGET_PATH)
+
+if not os.path.exists(target_path):
+    os.mkdir(target_path)
 
 def get_question_answer(coreference_input):
     sentences = sent_tokenize(coreference_input)

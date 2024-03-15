@@ -9,6 +9,9 @@ winoground_dict_relation = {}
 winoground_dict_object = {}
 winoground_dict_both = {}
 
+if not os.path.exists(target_path):
+    os.mkdir(target_path)
+
 with open(file_path, 'r') as winoground_data:
 
     for winoground_example in winoground_data:

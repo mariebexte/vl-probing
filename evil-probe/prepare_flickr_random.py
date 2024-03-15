@@ -5,6 +5,10 @@ import os
 import copy
 import random
 
+
+if not os.path.exists(utils.TARGET_PATH):
+    os.mkdir(utils.TARGET_PATH)
+
 random.seed(1334)
 
 def prepare_split(split):

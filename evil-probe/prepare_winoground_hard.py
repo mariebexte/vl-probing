@@ -6,6 +6,9 @@ from winoground_split import AMBIGUOUSLY_CORRECT
 data_path = "../source_datasets/Why-Winoground-Hard/examples_augmented.jsonl"
 target_dir = os.path.join(utils.TARGET_PATH)
 
+if not os.path.exists(target_dir):
+    os.mkdir(target_dir)
+
 # key: aspect, value: dict with examples for this aspect
 masterdict = {}
 

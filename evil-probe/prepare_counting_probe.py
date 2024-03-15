@@ -4,6 +4,9 @@ import utils
 
 data_dir = '../source_datasets/Counting-Probe'
 
+if not os.path.exists(utils.TARGET_PATH):
+    os.mkdir(utils.TARGET_PATH)
+
 for data_subdir in os.listdir(data_dir):
     if os.path.isdir(os.path.join(data_dir, data_subdir)):
 
