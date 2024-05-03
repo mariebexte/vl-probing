@@ -1,6 +1,6 @@
 # Visio-Linguistic Probing
 
-This repository contains the Rainbow (to appear at EACL 2024) and EViL-Probe (to appear at LREC-COLING 2024) visio-linguistic probing benchmarks.
+This repository contains the [Rainbow](https://aclanthology.org/2024.eacl-long.112.pdf) (EACL 2024) and EViL-Probe (to appear at LREC-COLING 2024) visio-linguistic probing benchmarks.
 It provides the code to derive these benchmarks from the existing datasets they base on.
 
 ![Benchmark Overview](benchmark-overview.png)
@@ -34,15 +34,15 @@ To compile EViL-Probe:
 
 All ```*.jsonl``` files in the benchmark have the same structure. This is what an exemplary entry looks like:
 ```json
-{"example_id": "example_770337_253737",
-"img_id": "COCO_val2014_000000391895.jpg",
-"img_ds": "MS_COCO/val2014",
-"sent_1": "A man with a red helmet on a small moped on a dirt road. ",
-"sent_1_label": true,
-"sent_2": "Two parking meter's with one covered and has graffiti on it.",
-"sent_2_label": false,
-"sent_ds": "MS_COCO",
- "ds_aspect": "random"}
+{"example_id":"example_440188",
+"img_id":"COCO_val2014_000000050125.jpg",
+"img_ds":"MS_COCO\/val2014",
+"ds_aspect":"noun",
+"sent_ds":"FOIL-IT",
+"sent_1":"An older picture of a bus and other vehicles in a parking lot. ",
+"sent_1_label":true,
+"sent_2":"an older picture of a bicycle and other vehicles in a parking lot.",
+"sent_2_label":false}
 ```
 
 
@@ -55,17 +55,16 @@ We annotated the Flickr30k examples with the color hues that are mentioned in th
 
 All ```*.jsonl``` files in the benchmark have the same structure. This is what an exemplary entry looks like:
 ```json
-{"example_id": "0_matrix_white_brown",
-"img_ds": "MS_COCO/val2014",
-"img_id": "COCO_val2014_000000033672.jpg",
-"sent_1": "A girl in is riding a white horse on a sunny day .",
-"sent_2": "A girl in is riding a brown horse on a sunny day .",
-"sent_1_label": true,
-"sent_2_label": false,
-"ds_aspect": "color_white_brown",
-"sent_ds": ["coco_random.jsonl"],
-"sent_1_color": "white",
-"sent_2_color": "brown"}
+{"example_id": "108_swapped",
+"img_ds": "Flickr30k",
+"img_id": "2332986053.jpg",
+"sent_1": "A man in an orange shirt and a blue hard hat smiles .",
+"sent_2": "A man in a blue shirt and an orange hard hat smiles .",
+"sent_1_label": true, "sent_2_label": false,
+"ds_aspect": "swap_color",
+"sent_ds": ["flickr30k_random.jsonl"],
+"sent_1_color": "orange",
+"sent_2_color": "blue"}
 ```
 
 ## Citations
@@ -83,12 +82,19 @@ EViL-Probe
 
 Rainbow
 ```
-@inproceedings{rainbow-2024,
+@inproceedings{bexte-etal-2024-rainbow,
     title = "Rainbow - A Benchmark for Systematic Testing of How Sensitive Visio-Linguistic Models are to Color Naming",
     author = "Bexte, Marie  and
       Horbach, Andrea  and
       Zesch, Torsten",
-    booktitle = "Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics",
+    editor = "Graham, Yvette  and
+      Purver, Matthew",
+    booktitle = "Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = mar,
     year = "2024",
+    address = "St. Julian{'}s, Malta",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.eacl-long.112",
+    pages = "1858--1875",
 }
 ```
