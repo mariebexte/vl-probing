@@ -1,6 +1,6 @@
 # Visio-Linguistic Probing
 
-This repository contains the [Rainbow](https://aclanthology.org/2024.eacl-long.112.pdf) (EACL 2024) and EViL-Probe (to appear at LREC-COLING 2024) visio-linguistic probing benchmarks.
+This repository contains the [Rainbow](https://aclanthology.org/2024.eacl-long.112.pdf) (EACL 2024) and [EViL-Probe](https://aclanthology.org/2024.lrec-main.591.pdf) (LREC-COLING 2024) visio-linguistic probing benchmarks.
 It provides the code to derive these benchmarks from the existing datasets they base on.
 
 ![Benchmark Overview](benchmark-overview.png)
@@ -70,14 +70,25 @@ All ```*.jsonl``` files in the benchmark have the same structure. This is what a
 ## Citations
 EViL-Probe
 ```
-@inproceedings{evil-probe-2024,
-    title = "EVil-Probe - A Composite Benchmark for Extensive Visio-Linguistic Probing",
+@inproceedings{bexte-etal-2024-evil-probe,
+    title = "{EV}il-Probe - a Composite Benchmark for Extensive Visio-Linguistic Probing",
     author = "Bexte, Marie  and
       Horbach, Andrea  and
       Zesch, Torsten",
-    booktitle = "Proceedings of LREC-COLING",
+    editor = "Calzolari, Nicoletta  and
+      Kan, Min-Yen  and
+      Hoste, Veronique  and
+      Lenci, Alessandro  and
+      Sakti, Sakriani  and
+      Xue, Nianwen",
+    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+    month = may,
     year = "2024",
-}
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.lrec-main.591",
+    pages = "6682--6700",
+    }
 ```
 
 Rainbow
@@ -96,5 +107,5 @@ Rainbow
     publisher = "Association for Computational Linguistics",
     url = "https://aclanthology.org/2024.eacl-long.112",
     pages = "1858--1875",
-}
+    }
 ```
